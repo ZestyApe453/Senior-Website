@@ -570,7 +570,7 @@ font-size: 42px;
 
 .subscribe_button {
 background-color: rgb(247, 190, 84);
-padding: 10px 25px;
+padding: 32px 25px;
 font-size: 42px;
 cursor: pointer;
 border-radius: 12px;
@@ -613,7 +613,7 @@ font-size: 42px;
 .comment_button 
 {
 align-self: center;
-padding: 48px 48px;
+padding: 32px 48px;
 font-size: 52px;
 cursor: pointer;
 border-radius: 15px;
@@ -621,6 +621,7 @@ border: none;
 background-color: rgb(197, 214, 253);
 transition: 0.2s;
 height: 30px;
+color: #000;
 }
 
 .comment_button:hover 
