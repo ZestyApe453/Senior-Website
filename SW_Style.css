@@ -399,7 +399,7 @@ display: none;
 
 .logo_img
 {
-width: 300px;
+width: 500px;
 }
 
 .header_link_container /*No text. Div with links for About, Mission, Subscribe*/
@@ -466,7 +466,7 @@ justify-content: center;
 .section_link
 {
 color: rgb(7, 142, 232);
-font-size: 40px;
+font-size: 52px;
 text-decoration: underline;
 }
 
