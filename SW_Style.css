@@ -483,7 +483,7 @@ margin-top: 40px;
 
 .post_title
 {
-font-size: 72px;
+font-size: 82px;
 margin: 0 auto 65px auto;
 max-width: 90%;
 }
@@ -577,6 +577,7 @@ border-radius: 12px;
 border: none;
 transition: 0.3s;
 color: black;
+height: 50px;
 }
 
 .subscribe_button:hover {
@@ -619,6 +620,7 @@ border-radius: 15px;
 border: none;
 background-color: rgb(197, 214, 253);
 transition: 0.2s;
+height: 50px;
 }
 
 .comment_button:hover 
