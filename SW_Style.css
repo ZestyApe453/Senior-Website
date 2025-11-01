@@ -577,7 +577,6 @@ border-radius: 12px;
 border: none;
 transition: 0.3s;
 color: black;
-height: 50px;
 }
 
 .subscribe_button:hover {
@@ -620,7 +619,6 @@ border-radius: 15px;
 border: none;
 background-color: rgb(197, 214, 253);
 transition: 0.2s;
-height: 30px;
 color: #000;
 }
 
