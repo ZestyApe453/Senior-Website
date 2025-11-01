@@ -455,7 +455,7 @@ transform: scale(1.08);
 
 .section_link_container
 {
-margin: 40px auto 0 auto;
+margin: 60px auto 40px auto;
 max-width: 90%;
 gap: 20px;
 display: flex;
@@ -500,7 +500,7 @@ margin-bottom: 40px;
 .post_info 
 {
 color: gray;
-font-size: 42px;
+font-size: 50px;
 }
 
 .post_img
@@ -516,7 +516,7 @@ border-radius: 0;
 text-align: left;
 margin: 60px auto 0 auto;
 margin-top: 60px;
-font-size: 42px;
+font-size: 48px;
 max-width: 90%;
 line-height: 1.6;
 color: #222;
