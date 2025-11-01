@@ -7,7 +7,7 @@ body
 }
 .site_header /*no text in this. its just a container for all the stuff in header */
 {
-    background-color: rgba(241, 241, 241, 0.984); 
+    background-color: rgba(219, 219, 219, 0.984); 
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -356,7 +356,7 @@ color: #111;
 }
 .site_header /*no text in this. its just a container for all the stuff in header */
 {
-background-color: rgba(241, 241, 241, 0.984); 
+background-color: rgba(219, 219, 219, 0.984); 
 display: flex;
 justify-content: space-between;
 align-items: center;
@@ -570,7 +570,7 @@ font-size: 42px;
 
 .subscribe_button {
 background-color: rgb(247, 190, 84);
-padding: 22px 25px;
+padding: 24px 25px;
 font-size: 42px;
 cursor: pointer;
 border-radius: 12px;
@@ -598,7 +598,7 @@ gap: 15px;
 .comment_text 
 {
 font-size: 42px;
-padding: 25px;
+padding: 22px;
 border-radius: 10px;
 border: 1px solid #ccc;
 font-family: Arial, Helvetica, sans-serif;
@@ -613,7 +613,7 @@ font-size: 42px;
 {
 align-self: center;
 padding: 22px 48px;
-font-size: 52px;
+font-size: 45px;
 cursor: pointer;
 border-radius: 15px;
 border: none;
