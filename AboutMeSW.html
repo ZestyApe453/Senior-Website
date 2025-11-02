@@ -70,13 +70,42 @@
             <h1 class="subscribe_header">Subscribe to my newsletter</h1>
             
             <h3 class="subscribe_subtitle">
-                Get my best online safety, scam awareness, and helpful tech tips delivered to your inbox every single week! It's free, and you can unsubscribe any time.
+                Get my best online safety, scam awareness, and helpful tech tips delivered to your inbox every single week! It's free, and you can unsubscribe anytime with 1 click.
             </h3>
 
-            <form class="subscribe_form">
-                <input type="email" class="subscribe_input" placeholder="Your email" required>
+            <form class="subscribe_form" action="https://formspree.io/f/mwpwaeep" method="POST">
+                <input 
+                    class="subscribe_input" 
+                    type="email" 
+                    name="email"
+                    placeholder="Your email" 
+                    required
+                >
                 <button type="submit" class="subscribe_button">Subscribe</button>
-            </form>
+                </form>
+                <!--BELOW DOES: PREVENTS REDIRECT + SENDS CONFIMATION MSG-->
+                <p id="subscribeResult" style="margin-top:10px;"></p>
+                <script>
+                    document.querySelector(".subscribe_form").addEventListener("submit", async (e) => {
+                    e.preventDefault(); // stop redirect
+                        
+                    const form = e.target;
+                    const result = document.getElementById("subscribeResult");
+
+                    const res = await fetch(form.action, {
+                        method: "POST",
+                        headers: { "Accept": "application/json" },
+                        body: new FormData(form)
+                    });
+
+                    if (res.ok) {
+                        result.textContent = "Thanks! You're subscribed.";
+                        form.reset();
+                    } else {
+                        result.textContent = "Something went wrong. Try again.";
+                    }
+                    });
+                </script>
         </div>
 
         
