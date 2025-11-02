@@ -1,296 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <title>Senior Tech</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background-color: #fafafa;
-      color: #111;
-    }
-
-    /* HEADER */
-    .site_header {
-      background-color: rgba(241, 241, 241, 0.98);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 50px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-
-    .header_titles {
-      display: flex;
-      align-items: baseline;
-      gap: 20px;
-    }
-
-    .site_title a {
-      color: #000;
-      text-decoration: none;
-      font-size: 28px;
-      font-weight: bold;
-    }
-
-    .site_title a:hover {
-      color: rgb(0, 112, 186);
-      text-decoration: underline;
-    }
-
-    .site_subtitle {
-      font-size: 18px;
-      color: #555;
-    }
-
-    .header_link_container {
-      display: flex;
-      gap: 15px;
-      font-size: 18px;
-    }
-
-    .top_link,
-    .sub_link {
-      text-decoration: none;
-      transition: all 0.2s ease;
-    }
-
-    .top_link {
-      color: rgb(0, 112, 186);
-    }
-
-    .top_link:hover {
-      text-decoration: underline;
-    }
-
-    .sub_link {
-      color: #000;
-      background-color: rgb(247, 190, 84);
-      padding: 10px 20px;
-      border-radius: 12px;
-      font-weight: bold;
-    }
-
-    .sub_link:hover {
-      background-color: rgb(240, 161, 12);
-      box-shadow: 0 0 20px rgba(232, 152, 3, 0.7),
-                  0 0 40px rgba(175, 114, 1, 0.4);
-      transform: scale(1.05);
-    }
-
-    /* SECTION NAV LINKS */
-    .section_link_container {
-      text-align: center;
-      margin-top: 60px;
-    }
-
-    .section_link {
-      color: rgb(7, 142, 232);
-      font-size: 22px;
-      margin: 0 15px;
-      text-decoration: underline;
-      transition: 0.2s;
-    }
-
-    .section_link:hover {
-      text-decoration: none;
-      color: rgb(0, 112, 186);
-    }
-
-    /* MAIN POST */
-    .new_post_header {
-      text-align: center;
-      margin-top: 50px;
-    }
-
-    .new_post_title {
-      font-size: 64px;
-      margin-bottom: 30px;
-    }
-
-    .new_post_info_container {
-      display: flex;
-      justify-content: center;
-      gap: 25px;
-      font-size: 18px;
-      color: gray;
-      margin-bottom: 40px;
-    }
-
-    .post_img {
-      max-width: 70%;
-      height: auto;
-      border-radius: 20px;
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
-    }
-
-    .new_post_body {
-      margin: 60px auto;
-      font-size: 22px;
-      line-height: 1.6;
-      max-width: 50%;
-      color: #222;
-    }
-
-    /* COMMENTS */
-    .comment_box {
-      margin: 60px auto 0 auto;
-      max-width: 50%;
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-    }
-
-    .comment_name,
-    .comment_text {
-      font-size: 18px;
-      padding: 12px;
-      border-radius: 10px;
-      border: 1px solid #ccc;
-      font-family: inherit;
-    }
-
-    .comment_text {
-      resize: none;
-    }
-
-    .comment_button {
-      align-self: center;
-      padding: 12px 24px;
-      font-size: 18px;
-      cursor: pointer;
-      border-radius: 15px;
-      border: none;
-      background-color: rgb(197, 214, 253);
-      transition: 0.2s;
-    }
-
-    .comment_button:hover {
-      background-color: rgb(10, 115, 200);
-      box-shadow: 0 0 15px rgba(10, 115, 200, 0.7),
-                  0 0 30px rgba(10, 115, 200, 0.4);
-      transform: scale(1.08);
-      color: white;
-    }
-
-    /* SUBSCRIBE BOX */
-    .subscribe_box {
-      background-color: rgb(17, 87, 131);
-      color: whitesmoke;
-      text-align: center;
-      padding: 60px 20px;
-      margin-top: 100px;
-    }
-
-    .subscribe_header {
-      font-size: 36px;
-      margin-bottom: 20px;
-    }
-
-    .subscribe_subtitle {
-      font-size: 18px;
-      max-width: 700px;
-      margin: 0 auto 30px;
-      line-height: 1.5;
-    }
-
-    .subscribe_form {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
-
-    .subscribe_input {
-      color: #fff;
-      background-color: rgb(5, 35, 88);
-      padding: 10px 15px;
-      font-size: 18px;
-      border: none;
-      border-radius: 10px;
-      min-width: 250px;
-    }
-
-    .subscribe_input::placeholder {
-      color: rgba(255, 255, 255, 0.75);
-    }
-
-    .subscribe_button {
-      background-color: rgb(247, 190, 84);
-      padding: 10px 25px;
-      font-size: 18px;
-      cursor: pointer;
-      border-radius: 12px;
-      border: none;
-      transition: 0.3s;
-    }
-
-    .subscribe_button:hover {
-      background-color: rgb(240, 161, 12);
-      box-shadow: 0 0 20px rgba(232, 152, 3, 0.7),
-                  0 0 40px rgba(175, 114, 1, 0.4);
-      transform: scale(1.08);
-    }
-
-  </style>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: left;
+            max-width: 25%;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.8;
+        }
+        a {
+          color: black;
+        }
+        a:hover {
+          color: rgb(64, 170, 251);
+          text-decoration: none;
+        }
+    </style>
 </head>
+
 <body>
-  <div class="site_header">
-    <div class="header_titles">
-      <h1 class="site_title"><a href="SeniorWebsite.html">Reid Carter Presents</a></h1>
-      <div class="site_subtitle">Helping Seniors Since 2025.</div>
-    </div>
+    Hey, I'm Reid Carter.
+    <br>
+    <br>
+    Thanks for signing up! You're on the list and you'll start receiving my 
+    new technology newsletter every Thursday. Each message includes 3 posts I 
+    have written over the past week about emerging scams you should avoid, 
+    interesting new technology, and online safety tips. 
+    <br>
+    <br>
+    In this first email I want to tell you 3 things:
+    <br>
+    <br>
+    <h3><strong>1. Make sure my emails can reach your Inbox</strong></h3>
+    If an email ever doesn't show up, check your "spam" or "all mail" folders. To ensure this never happens, you can whitelist me with the simple instruction on <a href="https://www.campaignmonitor.com/resources/guides/whitelisting/#apple" target="_blank">this page</a> (it has screenshots)
+    
+    <h3><strong>2. This newsletter builds on my live presentations, but is still valuable on its own</strong></h3>
+    Every few weeks I visit various Senior Living Facilities in the Saint Louis area to give residents presentations on topics ranging from changing smartphone wallpaper to pictures of their
+    grandkids to explaning the benefits of Artificial Intelligence in their daily lives. Many of the messages in this newsletter are inspired by suggestions residents have given to me, but have the
+    potential to benefit anybody. 
 
-    <div class="header_link_container">
-      <a class="top_link" href="AboutMeSW.html">About</a>
-      <a class="top_link" href="MissionSW.html">My Mission</a>
-      <a class="sub_link" href="SubscribePageSW.html">Subscribe!</a>
-    </div>
-  </div>
+    <h3><strong>3. View all past iterations on my website</strong></h3>
+    After sending out each newsletter, I copy the post onto my website <a href="https://reidstechtips.com" target="_blank">reidstechtips.com</a> for you to view at any time. Also, feel free to email any suspicious emails to reid@reidstechtips.com. I'll verify it, and get back to you as soon as possible.
+    
+    
 
-  <div class="section_link_container">
-    <a class="section_link" href="RecentScams.html">Recent Scams</a>
-    <a class="section_link" href="CoolNewTech.html">Cool New Tech</a>
-    <a class="section_link" href="OnlineSafety.html">How to Stay Safe Online</a>
-  </div>
 
-  <div class="newest_post">
-    <div class="new_post_header">
-      <h1 class="new_post_title">This is my Newest Post</h1>
-      <div class="new_post_info_container">
-        <h2>By Reid Carter</h2>
-        <h2>12 October 2025</h2>
-      </div>
-      <img class="post_img" src="exampleTechImg.jpg">
-    </div>
 
-    <div class="new_post_body">
-      You ever notice how sometimes you start thinking about something — like how long it actually takes for toast to pop up — and then, without really meaning to, your brain just takes a sharp left turn into something completely unrelated, like whether clouds actually have favorite shapes? It’s weird, because toast seems simple, right? Bread, heat, time. But then again, time’s a whole thing...
-    </div>
-
-    <form class="comment_box">
-      <input type="text" class="comment_name" placeholder="Your name" required>
-      <textarea class="comment_text" placeholder="Your comment..." rows="5" required></textarea>
-      <button type="submit" class="comment_button">Post comment</button>
-    </form>
-  </div>
-
-  <div class="subscribe_box">
-    <h1 class="subscribe_header">Subscribe to my newsletter</h1>
-    <h3 class="subscribe_subtitle">
-      Get my best online safety, scam awareness, and helpful tech tips delivered to your inbox every week. It's free, and you can unsubscribe any time.
-    </h3>
-    <form class="subscribe_form">
-      <input type="email" class="subscribe_input" placeholder="Your email" required>
-      <button type="submit" class="subscribe_button">Subscribe</button>
-    </form>
-  </div>
 </body>
-</html>
-<!-- 
- header is sticky, and it and footer take up whole bar.  better font and sizing for my post, top header
- smaller, 
