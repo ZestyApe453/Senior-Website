@@ -269,6 +269,10 @@ body
     transform: scale(1.08);
     color: white;
 }
+#subscribeResult{
+    font-weight: bolder;
+    font-size: x-large;
+}
 
 
 
