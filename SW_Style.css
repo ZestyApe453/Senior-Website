@@ -105,6 +105,7 @@ body
 {
     text-align: center;
     margin-top: 60px;
+    line-height: 1.8;
 }
 
 .section_link
@@ -113,6 +114,11 @@ body
     font-size: 22.5px;
     margin-right: 20px;
     text-decoration: underline;
+}
+
+.section_link_header 
+{
+  font-size: 27.5px;
 }
 
 .section_link:hover  
@@ -435,6 +441,11 @@ THIS IS FOR MOBILE DOWN BELOW
     gap: 10px;
     justify-content: center;
   }
+
+  .section_link_header 
+{
+  font-size: 25px;
+}
 
   .section_link {
     color: rgb(7,142,232);
